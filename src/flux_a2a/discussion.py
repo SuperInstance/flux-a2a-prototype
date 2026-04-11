@@ -443,18 +443,23 @@ class DebateStrategy(DiscussionStrategy):
         """Process a debate turn, tracking thesis/antithesis/synthesis."""
         self.add_turn(turn)
 
-        # Track argument points by stance
+        # Track argument points by stance and content type
         if isinstance(turn.content, dict):
+            ctype = turn.content.get("type", "")
             point = turn.content.get("argument", turn.content.get("point", ""))
-            if point:
+
+            # Check content type FIRST, before stance-based routing
+            if ctype == "concession":
+                self.concession_count += 1
+                if point:
+                    self.thesis_points.append(str(point))
+            elif ctype == "synthesis":
+                self.synthesis_candidates.append(str(point))
+            elif point:
                 if turn.stance == "pro":
                     self.thesis_points.append(str(point))
                 elif turn.stance == "con":
                     self.antithesis_points.append(str(point))
-                elif turn.content.get("type") == "concession":
-                    self.concession_count += 1
-                elif turn.content.get("type") == "synthesis":
-                    self.synthesis_candidates.append(str(point))
 
         # Update agent position confidence
         if turn.agent_id in self._positions:

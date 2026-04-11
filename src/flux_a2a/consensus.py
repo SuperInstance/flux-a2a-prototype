@@ -110,7 +110,7 @@ def cosine_similarity(a: list[float], b: list[float]) -> float:
     norm_b = math.sqrt(sum(y * y for y in b))
     if norm_a == 0.0 or norm_b == 0.0:
         return 0.0
-    return _clamp(dot / (norm_a * norm_b))
+    return dot / (norm_a * norm_b)
 
 
 def euclidean_distance(a: list[float], b: list[float]) -> float:
@@ -194,7 +194,7 @@ class AgentPosition:
         if not v1 or not v2:
             return 1.0
         if metric == SimilarityMetric.COSINE:
-            return 1.0 - cosine_similarity(v1, v2)
+            return _clamp(1.0 - cosine_similarity(v1, v2))
         elif metric == SimilarityMetric.EUCLIDEAN:
             max_dist = math.sqrt(len(v1)) if v1 else 1.0
             return _clamp(euclidean_distance(v1, v2) / max_dist)
@@ -853,9 +853,8 @@ class ConsensusDetector:
         type_priority = {
             ConsensusType.UNANIMOUS: 5,
             ConsensusType.SUPERMAJORITY: 4,
-            ConsensusType.CONSENSUS: 3,
-            ConsensusType.MAJORITY: 2,
-            ConsensusType.COMPROMISE: 1,
+            ConsensusType.MAJORITY: 3,
+            ConsensusType.COMPROMISE: 2,
             ConsensusType.CONVERGENCE: 1,
             ConsensusType.STALEMATE: 0,
         }
