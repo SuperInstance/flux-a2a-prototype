@@ -141,6 +141,23 @@ __all__ = [
     "partial_evaluate",
     "specialize_interpreter",
     "build_knowledge",
+    # FUTS — Universal Type System (R10-12)
+    "FluxBaseType",
+    "FluxConstraint",
+    "ConstraintKind",
+    "FluxType",
+    "FluxTypeSignature",
+    "FluxTypeRegistry",
+    "QuantumTypeState",
+    "TypeCompatibility",
+    "CompatibilityLevel",
+    "CompatibilityReport",
+    "UniversalTypeChecker",
+    "TypeCheckResult",
+    "TypeBridge",
+    "BridgeResult",
+    "BridgeStrategy",
+    "build_default_registry",
 ]
 
 from flux_a2a.schema import (
@@ -275,4 +292,24 @@ from flux_a2a.partial_eval import (
     build_knowledge,
     partial_evaluate,
     specialize_interpreter,
+)
+from flux_a2a.types import (
+    ConstraintKind,
+    FluxBaseType,
+    FluxConstraint,
+    FluxType,
+    FluxTypeRegistry,
+    FluxTypeSignature,
+    QuantumTypeState,
+    build_default_registry,
+)
+from flux_a2a.type_checker import (
+    BridgeResult,
+    BridgeStrategy,
+    CompatibilityLevel,
+    CompatibilityReport,
+    TypeBridge,
+    TypeCheckResult,
+    TypeCompatibility,
+    UniversalTypeChecker,
 )
