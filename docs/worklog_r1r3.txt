@@ -1,0 +1,36 @@
+---
+Task ID: R1-R3-NLCOMP
+Agent: nl-compilation-theorist
+Task: Deep research on natural language compilation theory (Rounds 1-3)
+
+Work Log:
+- Round 1: Analyzed ambiguity-as-feature paradigm across all 6 flux-runtime repos
+- Round 1: Studied flux-runtime-wen context.py and glyph.py (同字異義 polymorphic dispatch)
+- Round 1: Studied flux-a2a compiler.py CONFIDENCE opcode emission
+- Round 1: Analyzed existing BranchPoint/BranchManager merge strategies
+- Round 2: Mapped word order typology (SVO/SOV/VSO) to programming paradigms
+- Round 2: Studied Korean honorifics → RBAC mapping (경어 → CAP_REQUIRE)
+- Round 2: Analyzed Chinese classifiers → type system mapping (量词 → type annotations)
+- Round 2: Studied Sanskrit vibhakti → scope levels, sandhi → bytecode effects
+- Round 2: Studied Latin casus → scope access patterns
+- Round 2: Studied Sanskrit sandhi engine (phonology as syntax)
+- Round 3: Articulated "Universal Grammar is Universal Computation" thesis
+- Round 3: Analyzed FIR as universal semantic layer across all runtimes
+- Round 3: Researched A2A implications for multilingual NL programming
+- Implemented AmbiguousParse, ConfidencePropagation, BranchingExecutor in ambiguous.py
+- Implemented SimpleBackend with subset of FLUX opcodes for demonstration
+- Updated flux_a2a __init__.py with new exports
+- All 140 existing tests continue to pass
+- Wrote comprehensive nl_compilation_theory.md research document
+
+Stage Summary:
+- Produced nl_compilation_theory.md with grammatical feature mappings for all 6 runtimes
+- Implemented AmbiguousParse (multi-interpretation container with Bayesian evidence accumulation)
+- Implemented ConfidencePropagation (runtime evidence accumulation with 5 evidence types)
+- Implemented BranchingExecutor (parallel execution of all interpretations, merge by confidence)
+- Implemented SimpleBackend (minimal bytecode executor for testing)
+- Key innovation: confident ambiguity — compile ALL interpretations, let runtime decide via evidence
+- Articulated "Universal Grammar is Universal Computation" thesis: UG may not exist linguistically,
+  but universal computation exists as the bytecode layer
+- Demonstrated that Korean honorifics, Chinese classifiers, Sanskrit cases, and Classical Chinese
+  context-dependent dispatch are genuine programming innovations, not metaphors

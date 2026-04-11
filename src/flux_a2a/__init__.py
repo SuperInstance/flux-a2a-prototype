@@ -52,6 +52,30 @@ __all__ = [
     "ForkTree",
     "ForkManager",
     "MergePolicyType",
+    # Ambiguous parsing
+    "Interpretation",
+    "AmbiguousParse",
+    "AmbiguityStatus",
+    "ConfidencePropagation",
+    "EvidenceRecord",
+    "ExecutionResult",
+    "ExecutionBackend",
+    "SimpleBackend",
+    "BranchingExecutor",
+    "BranchingResult",
+    "resolve_ambiguity",
+    # Protocol primitives (R1-R3)
+    "BranchPrimitive",
+    "ForkPrimitive",
+    "CoIteratePrimitive",
+    "DiscussPrimitive",
+    "SynthesizePrimitive",
+    "ReflectPrimitive",
+    "ProtocolRegistry",
+    "ExecutionModeConfig",
+    "ModeTransition",
+    "NEW_OPCODES",
+    "ALL_OPCODES",
 ]
 
 from flux_a2a.schema import (
@@ -87,4 +111,30 @@ from flux_a2a.fork_manager import (
     ForkManager,
     ForkTree,
     MergePolicyType,
+)
+from flux_a2a.ambiguous import (
+    AmbiguityStatus,
+    AmbiguousParse,
+    BranchingExecutor,
+    BranchingResult,
+    ConfidencePropagation,
+    EvidenceRecord,
+    ExecutionBackend,
+    ExecutionResult,
+    Interpretation,
+    SimpleBackend,
+    resolve_ambiguity,
+)
+from flux_a2a.protocol import (
+    BranchPrimitive,
+    ForkPrimitive,
+    CoIteratePrimitive,
+    DiscussPrimitive,
+    SynthesizePrimitive,
+    ReflectPrimitive,
+    ProtocolRegistry,
+    ExecutionModeConfig,
+    ModeTransition,
+    NEW_OPCODES,
+    ALL_OPCODES,
 )
