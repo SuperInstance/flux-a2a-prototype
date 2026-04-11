@@ -121,6 +121,26 @@ __all__ = [
     "SynthesisApproach",
     "BranchingType",
     "OutputType",
+    # Evolution engine (R10-12)
+    "EvolutionEngine",
+    "EvolutionLevel",
+    "OptimizationKind",
+    "NLObservation",
+    "HotPath",
+    "NLPattern",
+    "CompiledPattern",
+    "Optimization",
+    "GrammarDelta",
+    "FitnessMetrics",
+    # Partial evaluator (R10-12)
+    "PartialEvaluator",
+    "PEResult",
+    "StaticKnowledge",
+    "PELevel",
+    "ReductionResult",
+    "partial_evaluate",
+    "specialize_interpreter",
+    "build_knowledge",
 ]
 
 from flux_a2a.schema import (
@@ -233,4 +253,26 @@ from flux_a2a.pipeline import (
     WorkflowResult,
     WorkflowSpec,
     WorkflowStatus,
+)
+from flux_a2a.evolution import (
+    CompiledPattern,
+    EvolutionEngine,
+    EvolutionLevel,
+    FitnessMetrics,
+    GrammarDelta,
+    HotPath,
+    NLObservation,
+    NLPattern,
+    Optimization,
+    OptimizationKind,
+)
+from flux_a2a.partial_eval import (
+    PELevel,
+    PEResult,
+    PartialEvaluator,
+    ReductionResult,
+    StaticKnowledge,
+    build_knowledge,
+    partial_evaluate,
+    specialize_interpreter,
 )
