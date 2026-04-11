@@ -76,6 +76,15 @@ __all__ = [
     "ModeTransition",
     "NEW_OPCODES",
     "ALL_OPCODES",
+    # Paradigm lattice (R4-R6)
+    "ParadigmLattice",
+    "ParadigmPoint",
+    "ParadigmFlow",
+    "BridgeCost",
+    "BridgeSimulation",
+    "DIMENSION_NAMES",
+    "DIMENSION_WEIGHTS",
+    "generate_simulation_report",
 ]
 
 from flux_a2a.schema import (
@@ -137,4 +146,16 @@ from flux_a2a.protocol import (
     ModeTransition,
     NEW_OPCODES,
     ALL_OPCODES,
+)
+from flux_a2a.paradigm_lattice import (
+    DIMENSION_NAMES,
+    DIMENSION_WEIGHTS,
+    ParadigmLattice,
+    ParadigmPoint,
+)
+from flux_a2a.paradigm_flow import (
+    BridgeCost,
+    BridgeSimulation,
+    ParadigmFlow,
+    generate_simulation_report,
 )
